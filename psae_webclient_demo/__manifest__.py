@@ -2,6 +2,7 @@
     "name": "WebClient Demo",
     "version": "1.0",
     "category": "Web",
+    "depends": ["web"],
     "assets": {
         "web.assets_backend": [
             "psae_webclient_demo/static/src/index.js",
