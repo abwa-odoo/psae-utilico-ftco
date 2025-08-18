@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="psae_webclient_demo.hello_button">
+        <button class="btn btn-sm" t-on-click="sayHello">
+            <t t-debug="0" />
+            <t t-if="props.session_user"><t t-out="props.session_user" /></t>
+            <t t-else="">👋 Hellos</t>
+        </button>
+    </t>
+
+</templates>

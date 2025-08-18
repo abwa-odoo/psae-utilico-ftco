@@ -4,10 +4,20 @@ import { Component, xml } from "@odoo/owl";
 import { session } from "@web/session";
 
 export class HelloButton extends Component {
-    static template = xml`<button class="btn btn-sm" t-on-click="sayHello">👋 Hello</button>`;
+    static template = "psae_webclient_demo.hello_button";
+    static props = { 
+        session_user: {
+            type: String,
+            optional: true,
+        }
+    };
+
+    setup() {
+        // debugger;
+        this.session_name = session.name;
+    }
 
     sayHello() {
-        debugger;
-        alert(`Hello ${session.name} from WebClient!`);
+        alert(`Hello ${this.session_name} from WebClient!`);
     }
 }
