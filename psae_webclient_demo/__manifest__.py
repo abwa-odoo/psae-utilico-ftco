@@ -1,0 +1,11 @@
+{
+    "name": "WebClient Demo",
+    "version": "1.0",
+    "category": "Web",
+    "assets": {
+        "web.assets_backend": [
+            "psae_webclient_demo/static/src/index.js",
+            "psae_webclient_demo/static/src/hello_button.js",
+        ]
+    }
+}
