@@ -1,0 +1,15 @@
+<odoo>
+    <template id="assets_page" name="Assets Demo Page (OWL)">&lt;!DOCTYPE html&gt;
+<html>
+    <head>
+        <link type="image/x-icon" rel="shortcut icon" t-att-href="'/web/static/img/favicon.ico'"/>
+        <t t-call-assets="psae_assets_demo.utilico_assets"/>
+    </head>
+    <body>
+        <div class="o_container">
+            <div id="owl-root"></div>
+        </div>
+    </body>
+</html>
+    </template>
+</odoo>
