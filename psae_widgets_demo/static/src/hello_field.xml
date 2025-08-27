@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="psae_widgets_demo.HelloBadgeField">
+        <t t-if="props.readonly">
+              <span class="badge bg-success">
+              <t t-if="typeof value === 'number'">
+                ⭐ <t t-esc="value"/> pts
+              </t>
+              <t t-elif="value">
+                👋 <t t-esc="value"/>
+              </t>
+                  <t t-else="">—</t>
+            </span>
+        </t>
+        <t t-else="">
+            <input type="text" t-att-value="value" t-on-input="onInput" class="form-control"/>
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record id="view_ftco_demo_tree" model="ir.ui.view">
+            <field name="name">ftco.widget.demo.tree</field>
+            <field name="model">ftco.widget.demo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="score" widget="hello_badge"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ftco_demo_form" model="ir.ui.view">
+            <field name="name">ftco.widget.demo.form</field>
+            <field name="model">ftco.widget.demo</field>
+            <field name="arch" type="xml">
+                <form string="Widget Demo">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="score" widget="hello_badge"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ftco_demo_items" model="ir.actions.act_window">
+            <field name="name">Items</field>
+            <field name="res_model">ftco.widget.demo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_open_hello_widget" model="ir.actions.client">
+            <field name="name">Hello Widget</field>
+            <field name="tag">ftco_widgets_demo.hello_widget_action</field>
+        </record>
+
+        <menuitem id="menu_ftco_root" name="FTCO" sequence="10"/>
+
+        <menuitem id="menu_ftco_hello" name="Hello Widget" parent="menu_ftco_root"
+                action="action_open_hello_widget" sequence="10"/>
+
+        <menuitem id="menu_ftco_items" name="Widget Items" parent="menu_ftco_root"
+                action="action_ftco_demo_items" sequence="20"/>
+    </data>
+</odoo>

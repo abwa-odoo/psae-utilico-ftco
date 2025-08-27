@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="psae_widgets_demo.HelloWidget">
+        <div class="o_form_view o_ftco_hello shadow p-3">
+            <h2>FTCO Hello Widget</h2>
+            <p>
+                This is a minimal OWL component registered as a client action.
+                It shows lifecycle hooks, local state, and DOM interaction.
+            </p>
+            <div class="d-flex align-items-center gap-2 my-2">
+                <button class="btn btn-secondary" t-on-click="decrement">-</button>
+                <span class="badge text-dark" t-esc="state.counter"/>
+                <button class="btn btn-primary" t-on-click="increment">+</button>
+            </div>
+            <div class="text-muted">Ticks since mount: <t t-esc="state.ticks"/></div>
+        </div>
+    </t>
+</templates>
