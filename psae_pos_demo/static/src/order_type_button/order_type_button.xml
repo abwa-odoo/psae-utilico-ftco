@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="psae_pos_demo.OrderTypeButton">
+        <span class="control-button js_discount btn btn-light rounded-0 fw-bolder" t-on-click="() => this.click()">
+            <span>
+                <i class="fa fa-tag me-1"></i>
+                Order Type
+            </span>
+        </span>
+    </t>
+</templates>
