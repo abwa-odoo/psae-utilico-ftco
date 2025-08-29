@@ -20,5 +20,4 @@ class PosSession(models.Model):
         }
 
     def _get_pos_ui_order_type(self, params):
-        res = self.env['order.type'].search_read(**params['search_params'])
-        return res
+        return self.env['order.type'].search_read(**params['search_params'])
