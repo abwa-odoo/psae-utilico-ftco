@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="psae_pos_demo.OrderTypePopup">
+        <div class="popup product-info-popup">
+            <div class="modal-header">
+                <h4 class="modal-title">Select Order Type</h4>
+                <div class="btn" t-on-click="cancel">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <main class="body modal-body overflow-auto">
+                <div class="row align-items-center mb-3">
+                    <div class="col-auto">
+                        <label for="order_type" class="form-label">Order Type:</label>
+                    </div>
+                    <div class="col">
+                        <select id="order_type" class="form-select" t-model='this.state.selectedTypeId'>
+                            <option t-att-value='false' t-out="''"></option>
+                            <t t-foreach="props.orderTypes" t-as="orderType" t-key="orderType.id">
+                                <option t-att-value="orderType.id" t-out="orderType.name"></option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+                <button class='btn-primary btn rounded-0 fw-bolder' t-out="'Confirm'" t-on-click='confirm'/>
+            </main>
+        </div>
+    </t>
+</templates>
