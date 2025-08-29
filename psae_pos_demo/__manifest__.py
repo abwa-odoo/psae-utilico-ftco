@@ -12,6 +12,7 @@
     },
     'data': [
         'security/ir.model.access.csv',
-        'views/order_type_views.xml'
+        'views/order_type_views.xml',
+        'views/pos_order_views.xml'
     ],
 }
