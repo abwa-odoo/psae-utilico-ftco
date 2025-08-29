@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="order_type_view_list" model="ir.ui.view">
+        <field name="name">order_type.view.list</field>
+        <field name="model">order.type</field>
+        <field name="arch" type="xml">
+            <tree string="Order Type" editable='bottom'>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="order_type_action" model="ir.actions.act_window">
+        <field name="name">Order Type</field>
+        <field name="res_model">order.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="order_type_menu"
+        name="Order Types"
+        action='order_type_action'  
+        parent='point_of_sale.menu_point_root'
+        sequence="12"/>
+</odoo>
