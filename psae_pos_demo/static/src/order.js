@@ -8,6 +8,11 @@ patch(Order.prototype, {
         super.init_from_JSON(...arguments)
         this.orderTypeId = json.order_type_id || false
     },
+    get_ordertype_name() {
+        const ordertype = this.pos.order_types.find((ot) => ot.id === this.orderTypeId);
+        debugger;
+        return ordertype ? ordertype.name : "None";
+    },
     export_as_JSON(){
         const result = super.export_as_JSON(...arguments)
         return {

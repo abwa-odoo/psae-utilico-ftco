@@ -5,6 +5,6 @@ import { patch } from "@web/core/utils/patch";
 
 patch(TicketScreen.prototype, {
     getOrderType(order) {
-        return order.orderTypeId;
+        return order.get_ordertype_name();
     }
 });

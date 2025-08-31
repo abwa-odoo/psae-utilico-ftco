@@ -15,6 +15,14 @@ export class OrderTypeButton extends Component {
         this.order_types = this.pos.order_types
     }
 
+    get displayText() {
+        const order = this.pos.get_order()
+        if (order && order.orderTypeId) {
+            return order.get_ordertype_name()
+        }
+        return "Order Type"
+    }
+
     async click(){
         const {confirmed, payload} = await this.popup.add(OrderTypePopup,
             {
@@ -25,7 +33,7 @@ export class OrderTypeButton extends Component {
         if (confirmed) {
             const { selectedTypeId } = payload
             const order = this.pos.get_order()
-            order.orderTypeId = selectedTypeId
+            order.orderTypeId = selectedTypeId | 0
         }
     }
 }
