@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.psae.pos.receipt.demo</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']/.." position="after">
+                <div class="o_row">
+                    <field name="arabic_name" placeholder="Arabic Name..."/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
