@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="psae_pos_receipt_demo.PartnerListScreen" t-inherit="point_of_sale.PartnerListScreen" t-inherit-mode="extension">
+        <th position="after">
+            <th class="py-2">Arabic Name</th>
+        </th>
+    </t>
+ </templates>
