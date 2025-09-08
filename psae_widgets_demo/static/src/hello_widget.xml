@@ -5,8 +5,39 @@
             <h2>FTCO Hello Widget</h2>
             <p>
                 This is a minimal OWL component registered as a client action.
-                It shows lifecycle hooks, local state, and DOM interaction.
+                It shows lifecycle hooks, local state, DOM interaction, and ORM service usage.
             </p>
+            
+            <!-- User Dropdown Section
+                 Why this structure:
+                 - Bootstrap form-label/form-select for consistent styling
+                 - t-foreach renders each user as an option dynamically
+                 - t-key="user.id" optimizes rendering performance
+                 - t-att-selected ensures correct option is visually selected
+                 - t-on-change binds to component method for interactivity
+            -->
+            <div class="mb-3">
+                <label for="userSelect" class="form-label">Select User:</label>
+                <select id="userSelect" class="form-select" t-on-change="onUserSelect">
+                    <t t-foreach="state.users" t-as="user" t-key="user.id">
+                        <option t-att-value="user.id" t-att-selected="state.selectedUser and state.selectedUser.id === user.id ? 'selected' : false">
+                            <t t-esc="user.name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            
+            <!-- Hello Message Section
+                 Why this approach:
+                 - t-if prevents rendering when no user is selected
+                 - Bootstrap alert-info provides visual emphasis
+                 - t-esc safely renders user name (prevents XSS attacks)
+                 - Responsive design with Bootstrap margin classes
+            -->
+            <div class="alert alert-info mb-3" t-if="state.selectedUser">
+                <h4>Hello <t t-esc="state.selectedUser.name"/>!</h4>
+            </div>
+            
             <div class="d-flex align-items-center gap-2 my-2">
                 <button class="btn btn-secondary" t-on-click="decrement">-</button>
                 <span class="badge text-dark" t-esc="state.counter"/>
