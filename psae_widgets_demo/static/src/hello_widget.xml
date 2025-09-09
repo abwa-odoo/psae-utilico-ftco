@@ -14,11 +14,11 @@
                  - t-foreach renders each user as an option dynamically
                  - t-key="user.id" optimizes rendering performance
                  - t-att-selected ensures correct option is visually selected
-                 - t-on-change binds to component method for interactivity
+                 - Select2 integration provides enhanced UX with search and styling
             -->
             <div class="mb-3">
                 <label for="userSelect" class="form-label">Select User:</label>
-                <select id="userSelect" class="form-select" t-on-change="onUserSelect">
+                <select t-ref="userSelect" id="uselect" class="form-select select2">
                     <t t-foreach="state.users" t-as="user" t-key="user.id">
                         <option t-att-value="user.id" t-att-selected="state.selectedUser and state.selectedUser.id === user.id ? 'selected' : false">
                             <t t-esc="user.name"/>
