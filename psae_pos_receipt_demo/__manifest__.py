@@ -2,7 +2,7 @@
 {
     'name': "Utilico - PoS Receipt Demo",
     'summary': "Custom module for PoS Receipt Customization.",
-    'version': '17.0.0.1.0',
+    'version': '18.0.0.1.0',
     'depends': ['point_of_sale'],
     'license': "OEEL-1",
     'assets': {

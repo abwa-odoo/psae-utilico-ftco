@@ -1,12 +1,13 @@
 /** @odoo-module */
 
-import { Order } from "@point_of_sale/app/store/models";
+import { PosOrder } from "@point_of_sale/app/models/pos_order";
 import { patch } from "@web/core/utils/patch";
 
-patch(Order.prototype, {
+patch(PosOrder.prototype, {
     export_for_printing() {
         const result = super.export_for_printing(...arguments);
-        result.headerData.customer = this.partner;
+        debugger;
+        result.headerData.customer = this.get_partner();
         return result;
     }
 });
