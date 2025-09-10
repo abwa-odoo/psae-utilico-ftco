@@ -5,11 +5,11 @@
             <div id="demo_widget" class="my_demo_widget text-center">
                 <h1>Hello World</h1>
                 <form id="partner-form" class="form-inline">
-                    <label for="partner-id" class="form-label">Partner ID:</label>
-                    <input type="text" class="partner-input" placeholder="Enter Partner ID"/>
+                    <label for="partner_id" class="form-label">Partner ID:</label>
+                    <input id="partner_id" type="number" class="partner-input" placeholder="Enter Partner ID"/>
                     <button type="submit" class="btn btn-small btn-primary btn-add-partner">Add Partner</button>
-                    <span id="result-message">Test Message</span>
-                    <i class="fa fa-times btn-remove-result-msg"/>
+                    <span id="result-message d-none"></span>
+                    <i class="fa fa-times btn-remove-result-msg d-none"/>
                 </form>
                 <div class="partner_list">
                 </div>
