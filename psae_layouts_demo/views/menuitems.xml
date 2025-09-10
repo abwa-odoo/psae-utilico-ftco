@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Parent menuitem under Website -->
+        <menuitem name="Demo Layouts"
+            id="menu_demo_layouts"
+            parent="website.menu_website_configuration"
+            sequence="10"
+            groups="base.group_user"/>
+
+        <!-- Actions for each controller route -->
+        <record id="action_web_layout_demo" model="ir.actions.act_url">
+            <field name="name">Web Layout Demo</field>
+            <field name="url">/web-layout</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_web_frontend_layout_demo" model="ir.actions.act_url">
+            <field name="name">Web Frontend Layout Demo</field>
+            <field name="url">/web-frontend-layout</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_portal_frontend_layout_demo" model="ir.actions.act_url">
+            <field name="name">Portal Frontend Layout Demo</field>
+            <field name="url">/portal-frontend-layout</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_website_layout_demo" model="ir.actions.act_url">
+            <field name="name">Website Layout Demo</field>
+            <field name="url">/website-layout</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menuitems for each controller -->
+        <menuitem name="Web Layout"
+            id="menu_web_layout_demo"
+            parent="menu_demo_layouts"
+            action="action_web_layout_demo"
+            sequence="10"
+            groups="base.group_user"/>
+
+        <menuitem name="Web Frontend Layout"
+            id="menu_web_frontend_layout_demo"
+            parent="menu_demo_layouts"
+            action="action_web_frontend_layout_demo"
+            sequence="20"
+            groups="base.group_user"/>
+
+        <menuitem name="Portal Frontend Layout"
+            id="menu_portal_frontend_layout_demo"
+            parent="menu_demo_layouts"
+            action="action_portal_frontend_layout_demo"
+            sequence="30"
+            groups="base.group_user"/>
+
+        <menuitem name="Website Layout"
+            id="menu_website_layout_demo"
+            parent="menu_demo_layouts"
+            action="action_website_layout_demo"
+            sequence="40"
+            groups="base.group_user"/>
+    </data>
+</odoo>
