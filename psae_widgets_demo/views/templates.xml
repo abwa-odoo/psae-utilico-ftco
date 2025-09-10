@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="psae_widgets_demo.my_hompage" inherit_id="website.homepage">
+        <div id="wrap" position='after'>
+            <div id="demo_widget" class="my_demo_widget text-center">
+                <h1>Hello World</h1>
+                <div class="partner_list">
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>
