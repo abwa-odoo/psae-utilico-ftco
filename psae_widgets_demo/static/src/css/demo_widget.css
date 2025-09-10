@@ -1,0 +1,214 @@
+/* Demo Widget Styles - Odoo Style */
+
+.o_demo_widget {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.o_demo_widget .o_demo_title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 10px;
+}
+
+.o_demo_widget .o_demo_form {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.o_demo_widget .o_demo_form .o_form_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.o_demo_widget .o_demo_form .o_form_label {
+    color: #495057;
+    font-weight: 500;
+    min-width: 100px;
+    margin: 0;
+}
+
+.o_demo_widget .o_demo_form .o_form_input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.o_demo_widget .o_demo_form .o_form_input:focus {
+    border-color: #007cba;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 124, 186, 0.25);
+}
+
+.o_demo_widget .o_demo_form .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.o_demo_widget .o_demo_form .btn-primary {
+    background-color: #007cba;
+    color: #ffffff;
+}
+
+.o_demo_widget .o_demo_form .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.o_demo_widget .o_demo_form .btn-primary:active {
+    transform: translateY(0);
+}
+
+.o_demo_widget .o_result_message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: none;
+}
+
+.o_demo_widget .o_result_message.o_success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.o_demo_widget .o_result_message.o_error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.o_demo_widget .o_result_message .o_close_btn {
+    float: right;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.o_demo_widget .o_result_message .o_close_btn:hover {
+    opacity: 1;
+}
+
+.o_demo_widget .o_partner_list {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    min-height: 100px;
+    padding: 15px;
+}
+
+.o_demo_widget .o_partner_list .o_partner_item {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.15s ease-in-out;
+}
+
+.o_demo_widget .o_partner_list .o_partner_item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.o_demo_widget .o_partner_list .o_partner_item:last-child {
+    margin-bottom: 0;
+}
+
+.o_demo_widget .o_partner_list .o_partner_info {
+    flex: 1;
+}
+
+.o_demo_widget .o_partner_list .o_partner_name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.o_demo_widget .o_partner_list .o_partner_id {
+    font-size: 12px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.o_demo_widget .o_partner_list .o_partner_actions {
+    display: flex;
+    gap: 5px;
+}
+
+.o_demo_widget .o_partner_list .o_partner_actions .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.o_demo_widget .o_partner_list .o_partner_actions .btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.o_demo_widget .o_partner_list .o_partner_actions .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.o_demo_widget .o_empty_state {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+.o_demo_widget .o_empty_state .fa {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .o_demo_widget .o_demo_form .o_form_group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .o_demo_widget .o_demo_form .o_form_label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .o_demo_widget .o_partner_list .o_partner_item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .o_demo_widget .o_partner_list .o_partner_actions {
+        justify-content: center;
+    }
+}

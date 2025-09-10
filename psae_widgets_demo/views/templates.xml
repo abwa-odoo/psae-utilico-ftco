@@ -2,16 +2,26 @@
 <odoo>
     <template id="psae_widgets_demo.my_hompage" inherit_id="website.homepage">
         <div id="wrap" position="after">
-            <div id="demo_widget" class="my_demo_widget text-center">
-                <h1>Hello World</h1>
-                <form id="partner-form" class="form-inline">
-                    <label for="partner_id" class="form-label">Partner ID:</label>
-                    <input id="partner_id" type="number" class="partner-input" placeholder="Enter Partner ID"/>
-                    <button type="submit" class="btn btn-small btn-primary btn-add-partner">Add Partner</button>
-                    <span id="result-message d-none"></span>
-                    <i class="fa fa-times btn-remove-result-msg d-none"/>
+            <div id="demo_widget" class="o_demo_widget">
+                <h1 class="o_demo_title">Partner Management Demo</h1>
+                <form id="partner-form" class="o_demo_form">
+                    <div class="o_form_group">
+                        <label for="partner_id" class="o_form_label">Partner ID:</label>
+                        <input id="partner_id" type="number" class="o_form_input" placeholder="Enter Partner ID" min="1"/>
+                        <button type="submit" class="btn btn-primary btn-add-partner">
+                            <i class="fa fa-plus"></i> Add Partner
+                        </button>
+                    </div>
+                    <div id="result-message" class="o_result_message">
+                        <span class="o_message_text"></span>
+                        <i class="fa fa-times o_close_btn btn-remove-result-msg"></i>
+                    </div>
                 </form>
-                <div class="partner_list">
+                <div class="o_partner_list">
+                    <div class="o_empty_state">
+                        <i class="fa fa-users"></i>
+                        <p>No partners added yet. Add a partner ID above to get started.</p>
+                    </div>
                 </div>
             </div>
         </div>
