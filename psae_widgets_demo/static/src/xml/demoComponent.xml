@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<templates xml:space="preserve">
+    <t t-name="psae_widgets_demo.demoComponent">
+        <h6>
+            This is my Demo Component, My name is <t t-out="this.props.name || 'N/A'"/>
+        </h6>
+    </t>
+</templates>

@@ -4,6 +4,7 @@
         <div id="wrap" position="after">
             <div id="demo_widget" class="o_demo_widget">
                 <h1 class="o_demo_title">Partner Management Demo</h1>
+                <owl-component name='demoComponent' props='{"name": "Abdulrahman"}'/>
                 <form id="partner-form" class="o_demo_form">
                     <div class="o_form_group">
                         <label for="partner_id" class="o_form_label">Partner ID:</label>
