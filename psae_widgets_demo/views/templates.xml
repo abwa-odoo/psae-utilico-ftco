@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="psae_widgets_demo.my_hompage" inherit_id="website.homepage">
-        <div id="wrap" position='after'>
+        <div id="wrap" position="after">
             <div id="demo_widget" class="my_demo_widget text-center">
                 <h1>Hello World</h1>
+                <form id="partner-form" class="form-inline">
+                    <label for="partner-id" class="form-label">Partner ID:</label>
+                    <input type="text" class="partner-input" placeholder="Enter Partner ID"/>
+                    <button type="submit" class="btn btn-small btn-primary btn-add-partner">Add Partner</button>
+                    <span id="result-message">Test Message</span>
+                    <i class="fa fa-times btn-remove-result-msg"/>
+                </form>
                 <div class="partner_list">
                 </div>
             </div>
