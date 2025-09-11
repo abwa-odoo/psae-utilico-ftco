@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_snippet">
+        <section class="custom_ftco_snippet">
+            <h4>Hello World</h4>
+        </section>
+    </template>
+
+    <template id="psae_snippets_demo.custom_snippet_option" inherit_id="website.snippets">
+        <div id="snippet_structure" position="before">
+            <div id="custom_snippet_structure" class="o_panel">
+                <div class="o_panel_header">FTCO Snippet Demo</div>
+                <div class="o_panel_body">
+                    <t t-snippet="psae_snippets_demo.custom_snippet" string="Test Snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg" />
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="psae_snippets_demo.snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-selector=".custom_ftco_snippet">
+                <we-button>Test</we-button>
+                <we-button-group string="Width">
+                    <we-button data-select-class="w-25">25%</we-button>
+                    <we-button data-select-class="w-50">50%</we-button>
+                    <we-button data-select-class="w-75">75%</we-button>
+                    <we-button data-select-class="w-100">100%</we-button>
+                </we-button-group>
+                <we-select string="Color" data-no-preview="true">
+                    <we-button data-select-class="bg-danger">Red</we-button>
+                    <we-button data-select-class="bg-warning">Yellow</we-button>
+                    <we-button data-select-class="bg-success">Green</we-button>
+                </we-select>
+                <we-checkbox string='Invisible' data-select-class="d-none" data-no-preview='true'/>
+                <we-input string='Border Radius' data-select-style="0" data-extra-class="border border-dark"
+                        data-css-property="border-radius"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
